@@ -20,12 +20,13 @@
                 const content = link.import;
                 console.log(content);
                 header = content.querySelector('header');
-                console.log(header);
+                
                 footer = content.querySelector('footer');
-                console.log(footer);   
+      
             })
             // // Grab DOM from warning.html's document.
-           
+            console.log(header);
+            console.log(footer); 
             document.body.prepend(header.cloneNode(true));
             document.body.append(footer.cloneNode(true));
         </script>
