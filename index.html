@@ -11,24 +11,52 @@
     </head>
     <body>
         <script>
+            class Page {
+                // initiate the class with a empty contsructor
+                constructor(){
+                    this.header = header;
+                    this.footer = footer;
+                }
+                // setter method to set the header
+                setHeader(header){
+                    if(header !== null){
+                        this.header = header;
+                    }
+                    // continue the loop if the value is null
+                    continue;
+                }
+                // setter method to set the footer
+                setFooter(footer){
+                    if(footer !== null){
+                        this.footer = footer;
+                    }
+                    // continue the loop if value is null
+                    continue;
+                }
+            }
+
+            const index = new Page();
 
             const links = document.querySelectorAll('link[rel="import"]');
-            let header;
-            let footer;
-
             links.forEach((link)=>{
                 const content = link.import;
                 console.log(content);
+
+                // select the header 
                 header = content.querySelector('header');
-                
+                // pass the header to the setter
+                index.setHeader(header);
+
+                // select the footer
                 footer = content.querySelector('footer');
-      
+                // pass the footer to the setter
+                index.setFooter(footer);
             })
-            // // Grab DOM from warning.html's document.
-            console.log(header);
-            console.log(footer); 
-            document.body.prepend(header);
-            document.body.append(footer);
+
+            // log the new index after the setters have run
+            console.log(index); 
+            document.body.prepend(index.header);
+            document.body.append(index.footer);
         </script>
     </body>
 </html>
