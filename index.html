@@ -10,11 +10,13 @@
         <script>
             const link = document.querySelector('link[rel="import"]');
             const content = link.import;
-            console.log(content);
+            
             // Grab DOM from warning.html's document.
-            // var el = content.querySelector('.warning');
-
-            // document.body.appendChild(content.cloneNode(true));
+             const header = content.querySelector('header');
+             console.log(header);
+             const footer = content.querySelector('footer');
+             console.log(footer);
+            document.body.appendChild(header.cloneNode(true));
         </script>
     </body>
 </html>
