@@ -3,14 +3,14 @@
     <head>
         <title>Benjamin Spille</title>
         <link rel="icon" type="image/png" href="./images/favicon">
-        <link rel="import" href="./components/header.html">
-        <link rel="import" href="./components/footer.html">
+        <link rel="import" href="./components/*">
+
     </head>
     <body>
         <script>
             const link = document.querySelector('link[rel="import"]');
             const content = link.import;
-            
+            console.log(content);
             // Grab DOM from warning.html's document.
              const header = content.querySelector('header');
              console.log(header);
