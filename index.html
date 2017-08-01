@@ -9,15 +9,18 @@
     </head>
     <body>
         <script>
-            const link = document.querySelectorAll('link[rel="import"]');
-            const content = link.import;
-            console.log(link);
-            // Grab DOM from warning.html's document.
-             const header = content.querySelector('header');
-             console.log(header);
-             const footer = content.querySelector('footer');
-             console.log(footer);
-            document.body.appendChild(header.cloneNode(true));
+            const imports = document.querySelectorAll('link[rel="import"]');
+            links.forEach((link)=>{
+                console.log(link.import.innerHTML);
+                
+            })
+            
+            // // Grab DOM from warning.html's document.
+            //  const header = content.querySelector('header');
+            //  console.log(header);
+            //  const footer = content.querySelector('footer');
+            //  console.log(footer);
+            // document.body.appendChild(header.cloneNode(true));
         </script>
     </body>
 </html>
