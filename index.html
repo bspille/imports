@@ -11,17 +11,16 @@
         <script>
             const links = document.querySelectorAll('link[rel="import"]');
             links.forEach((link)=>{
-                const content = link;
-                
+                const content = link.import;
                 console.log(content);
-                
+                const header = content.querySelector('header');
+                console.log(header);
+                const footer = content.querySelector('footer');
+                console.log(footer);   
             })
             
             // // Grab DOM from warning.html's document.
-            //  const header = content.querySelector('header');
-            //  console.log(header);
-            //  const footer = content.querySelector('footer');
-            //  console.log(footer);
+           
             // document.body.appendChild(header.cloneNode(true));
         </script>
     </body>
