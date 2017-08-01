@@ -3,25 +3,31 @@
     <head>
         <title>Benjamin Spille</title>
         <link rel="icon" type="image/png" href="./images/favicon">
+
+        <!--import html partial here-->
         <link rel="import" href="./components/header.html">
         <link rel="import" href="./components/footer.html">
 
     </head>
     <body>
         <script>
+
             const links = document.querySelectorAll('link[rel="import"]');
+            let header;
+            let footer;
+
             links.forEach((link)=>{
                 const content = link.import;
                 console.log(content);
-                const header = content.querySelector('header');
+                header = content.querySelector('header');
                 console.log(header);
-                const footer = content.querySelector('footer');
+                footer = content.querySelector('footer');
                 console.log(footer);   
             })
-            
             // // Grab DOM from warning.html's document.
            
-            // document.body.appendChild(header.cloneNode(true));
+            document.body.prepend(header.cloneNode(true));
+            document.body.append(footer.cloneNode(true));
         </script>
     </body>
 </html>
