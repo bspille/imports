@@ -11,9 +11,9 @@
         <script>
             const links = document.querySelectorAll('link[rel="import"]');
             links.forEach((link)=>{
-                const content = link.import;
+                const content = link.innerHTML;
                 
-                console.log(content.innerHTML);
+                console.log(content);
                 
             })
             
