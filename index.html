@@ -2,17 +2,25 @@
 <html>
     <head>
         <title>Benjamin Spille</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!--favicon image -->
         <link rel="icon" type="image/png" href="./images/favicon">
-
+        <!--link in Roboto font family from google fonts-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <!--materialize cdn with sri-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css" integrity="sha256-mkKV3FUh67dtli09bVbaYyM1526XgR92cz1uKarE1jo=" crossorigin="anonymous" />
+        <!--materialize javascript cdn with sri-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js" integrity="sha256-3mqgTUhHNgfXgjrzjPOaW03DdQ9hgW92BApzLREoRoA=" crossorigin="anonymous"></script>
         <!--import html partial here-->
         <link rel="import" href="./components/header.html">
         <link rel="import" href="./components/footer.html">
 
     </head>
     <body>
-        <div>
-            hello world
-        </div>
+        <div id="test1" class="col s12">Test 1</div>
+        <div id="test2" class="col s12">Test 2</div>
+        <div id="test3" class="col s12">Test 3</div>
+        <div id="test4" class="col s12">Test 4</div>
         <script>
             class Page {
                 // initiate the class with a empty contsructor
@@ -42,7 +50,7 @@
                 console.log(content);
 
                 // select the header 
-                header = content.querySelector('header');
+                header = content.querySelector('nav');
                 // pass the header to the setter
                 index.setHeader(header);
 
